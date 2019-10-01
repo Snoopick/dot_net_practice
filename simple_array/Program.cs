@@ -17,7 +17,7 @@ namespace simple_array {
 
             Console.WriteLine("Changed array");
             for (int i = 0; i < array.Length; i++) {
-                if (i == 2) {
+                if (i == 3) {
                     array[i] *= 10;
                 }
 
