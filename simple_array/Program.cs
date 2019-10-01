@@ -4,16 +4,15 @@ namespace simple_array {
     class Program {
         static void Main(string[] args) {
             int[] array = new int[6];
+            Random rnd = new Random();
 
             for (int i = 0; i < array.Length; i++) {
-                Console.WriteLine("Enter num");
-                array[i] = Convert.ToInt32(Console.ReadLine());
+                array[i] = rnd.Next(0, 50);
             }
 
             for (int i = 0; i < array.Length; i++) {
                 Console.WriteLine(array[i]);
             }
-
 
             Console.WriteLine("Changed array");
             for (int i = 0; i < array.Length; i++) {
@@ -23,6 +22,24 @@ namespace simple_array {
 
                 Console.WriteLine(array[i]);
             }
+
+            int max = array[0];
+            int min = array[0];
+            for (int i = 0; i < array.Length; i++) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+
+                if (array[i] < min) {
+                    min = array[i];
+                }
+            }
+
+            Console.WriteLine("Max num");
+            Console.WriteLine(max);
+
+            Console.WriteLine("Min num");
+            Console.WriteLine(min);
         }
     }
 }
