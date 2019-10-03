@@ -58,10 +58,11 @@ namespace lucture_6_tasks {
 
         static void Task4() {
             short num = 123;
-            object num2 = num;
+            int num2 = num;
             sbyte num3 = (sbyte)num2;
 
-            Console.WriteLine("result num: " + num3);
+            Console.WriteLine("result num: " + num3 + "\n" +
+                "num type " + num3.GetType());
         }
     }
 }
